@@ -29,6 +29,11 @@ body {
   line-height: 1.75;
   color: var(--text);
   min-height: 100svh;
+  cursor:url('/images/main/cursor.png') 0 0, auto;
+}
+
+a,a:hover, button:hover, a::before, .filtre{
+  cursor : url('/images/main/loader.png') 0 0, pointer;
 }
 
 /* responsive images/videos */
@@ -128,4 +133,8 @@ ul {
     --secondary: #5b5d4b;
     --accent: #98a088;
   }
+}
+
+a{
+  text-decoration: none;
 }

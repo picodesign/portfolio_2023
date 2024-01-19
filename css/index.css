@@ -15,6 +15,7 @@
     vertical-align: bottom;
     line-height: 0.3;
     font-size: 15vw;
+    color: var(--text);
   }
 
   /*work*/
@@ -205,15 +206,18 @@
 
     span:nth-of-type(1) {
       width: 50%;
+      height: 4px;
 
     }
 
     span:nth-of-type(2) {
       width: 100%;
+      height: 4px;
     }
 
     span:nth-of-type(3) {
       width: 75%;
+      height: 4px;
 
     }
 

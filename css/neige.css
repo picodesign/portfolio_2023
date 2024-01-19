@@ -1,0 +1,95 @@
+.snow,
+.snow__calque {
+    display: none; /* Par défaut, les div sont masquées */
+}
+
+.snow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0 ;
+    overflow: hidden;
+    z-index: -9;
+
+}
+
+.snow__calque{
+    position: absolute;
+    pointer-events: none;
+    /* toute la page */
+    left: -100px;
+    right: -100px;
+    animation: vent 3s cubic-bezier(0.27, 0, 0.77, 0.99) infinite alternate;
+    /* decouverte de la coubre de bezier sur le navigateur pour une animation plus personalisé */
+    perspective: 100px;
+    /* perspective pour manipuler la profondeur de chanp avec translateZ */
+    transform: translateX(-50px);
+    
+}
+
+.snow__calque::after, .snow__calque:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2000px;
+    background: url(/images/neige/neige_light.png);
+    animation: tombelight 10s linear infinite;
+    /* ca utilise l'animation que j'ai crée juste en dessous */
+    transform: translateZ(50px);
+}
+
+
+/* decalage de l'image fou pour avoir un meilleur effect entre les flocons et le fond */
+.snow__calque:nth-child(1) {
+animation-duration: 35s;
+}
+
+/* integration de l'image fou pour diferenctier */
+.snow__calque:nth-child(1)::after {
+    background-image: url(/images/neige/flou_fond.png);
+    transform: translateZ(25px);
+    /* l'image de flou est trop zoomer a 50px */
+    animation-name: tombeblur;
+    /* utilisation du keyframe tombeblur que j'ai crée pour eviter que le 25 px s'appliqye a toutes les classes */
+
+}
+
+.snow__calque:nth-child(2)::after {
+    background-image: url(/images/neige/neige_main.png);
+    animation-duration: 25s;
+}
+
+.snow__calque:nth-child(3)::after {
+    animation-duration: 10s;
+    background-size: 250%;
+}
+.snow__calque:nth-child(3)::before {
+    animation-duration: 20s;
+    background-size: 500%;
+}
+
+/* animation de naige qui tombe */
+@keyframes tombe {
+    from{
+        transform: translateY(-1000px);
+    }
+}
+@keyframes tombelight {
+    from{
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
+@keyframes tombeblur {
+    from{
+        transform: translateY(-1000px) translateZ(25px);
+    }
+}
+/* animation qui simule le vent */
+@keyframes vent {
+    to{
+        transform: translateX(80px);
+    }
+}
