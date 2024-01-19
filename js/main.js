@@ -29,3 +29,10 @@ filterButtons.forEach((button) => {
     }
   });
 });
+
+
+// menu mobile
+document.getElementById('check').addEventListener('change', function() {
+  document.body.classList.toggle('active', this.checked);
+});
+

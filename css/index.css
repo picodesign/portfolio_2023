@@ -1,22 +1,24 @@
-  body{
+  body {
     overflow: hidden;
   }
-  .contenu{
+
+  .contenu {
     position: absolute;
     display: inline-block;
     bottom: 15px;
     vertical-align: baseline;
   }
+
   .contenu h1 {
     margin: 0;
     padding: 0;
     vertical-align: bottom;
-    line-height: 0.3  ;
+    line-height: 0.3;
     font-size: 15vw;
   }
-  
-   /*work*/
-   .liste-travaux {
+
+  /*work*/
+  .liste-travaux {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -24,21 +26,23 @@
     align-items: center;
     margin-top: 1rem;
   }
+
   .liste-travaux .travail {
     margin: 0 1.5rem 0 0;
   }
-  
+
   .liste-travaux a {
     text-decoration: none;
     color: var(--secondary);
     /* revoir les couleur et la dispositions des liens */
   }
-  .liste-travaux  a:hover {
+
+  .liste-travaux a:hover {
     text-decoration: none;
     color: var(--accent);
   }
-  
-  
+
+
   /* tag pour work */
   .filtrers_card {
     position: absolute;
@@ -53,14 +57,32 @@
     align-items: center;
     list-style: none;
   }
-  .div1 { grid-area: 1 / 4 / 2 / 5; }
-  .div2 { grid-area: 1 / 5 / 2 / 6; }
-  .div3 { grid-area: 2 / 4 / 3 / 5; }
-  .div4 { grid-area: 2 / 5 / 3 / 6; }
-  .div5 { grid-area: 3 / 4 / 4 / 5; }
-  .div6 { grid-area: 3 / 5 / 4 / 6; }
-  
-  
+
+  .div1 {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+
+  .div2 {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+
+  .div3 {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+
+  .div4 {
+    grid-area: 2 / 5 / 3 / 6;
+  }
+
+  .div5 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+
+  .div6 {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+
+
   .filtre {
     border: solid 1px var(--primary);
     border-radius: 20px;
@@ -72,32 +94,40 @@
     flex-direction: row;
     transition: background-color 0.3s, color 0.3s;
   }
-  
-  .filtre h5{
+
+  .filtre h5 {
     margin: 0;
     padding-top: 10px;
   }
+
   /* selection */
   .filtre:hover {
     background-color: var(--secondary);
   }
+
   .filtre.active {
     background-color: var(--primary);
     color: var(--background);
   }
-  
+
+  .filtres_mobile {
+    display: none;
+    z-index: 2;
+  }
+
   /* responsive tablet et mobile*/
   @media (max-width: 750px) {
-  
-    .liste-travaux{
+
+    .liste-travaux {
       position: fixed;
       height: 80%;
       overflow-y: scroll;
       /* scroll vertical uniquement */
       right: 15px;
       left: 15px;
-      /* background-color: blue; */
+
     }
+
     .liste-travaux::before {
       content: "";
       position: fixed;
@@ -106,22 +136,159 @@
       width: 100%;
       height: 4%;
       /* Dégradé linéaire pour le fondu d'opacité */
-      background: linear-gradient(transparent, var(--background) );
-    
+      background: linear-gradient(transparent, var(--background));
+
     }
+
     .liste-travaux .travail {
-     width: 100%;
+      width: 100%;
     }
+
     .liste-travaux h4 {
       font-size: 2rem;
       /* typo plus petite pour tel */
     }
-    .contenu{
+
+    .contenu {
       position: fixed;
     }
+
     .filtrers_card {
       display: none;
     }
 
+    /* etat avant des categorie poir animation */
+    .filtrers_card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: var(--background);
+      justify-content: center;
+      align-items: center;
+
+      z-index: 2;
+      opacity: 0%;
+    }
+
+    .filtre {
+      border: none;
+    }
+
+    body:not(.active) .liste-travaux {
+      pointer-events: auto;
+      z-index: 3;
+    }
+
+    /*Croix*/
+    .filtres_mobile {
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      z-index: 2;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 10vw;
+      cursor: pointer;
+    }
+
+    label span {
+      background: var(--text);
+      border-radius: 0%;
+      height: 1vw;
+      margin: 1vw 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    span:nth-of-type(1) {
+      width: 50%;
+
+    }
+
+    span:nth-of-type(2) {
+      width: 100%;
+    }
+
+    span:nth-of-type(3) {
+      width: 75%;
+
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked~span:nth-of-type(1) {
+      transform-origin: bottom;
+      transform: rotatez(45deg) translate(1vw, 0px)
+    }
+
+    input[type="checkbox"]:checked~span:nth-of-type(2) {
+
+      transform-origin: top;
+      transform: rotatez(-45deg)
+    }
+
+    input[type="checkbox"]:checked~span:nth-of-type(3) {
+
+      transform-origin: bottom;
+      width: 50%;
+      transform: translate(4vw, -1.8vw) rotatez(45deg);
+      /* j'ai utiliser le outils inspecter sur chrome pour trouver la bonne valeur responsive en vw */
+
+    }
+
+
+    /* consequence */
+    /* apparence croix */
+    body.active label span {
+      background: var(--background);
+    }
+
+    .contenu,
+    .liste-travaux,
+    .filtrers_card {
+      transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    /* fond blur */
+    body.active .contenu,
+    body.active .liste-travaux {
+      filter: blur(3.5px);
+    }
+
+    body.active::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    /* visualisation des tag mis en opacité de 0 */
+    body.active .filtrers_card {
+      opacity: 100%;
+    }
+
+    body.active .filtre {
+      padding: 0 20px;
+    }
+
+    body.active .filtre.active {
+      background-color: var(--text);
+    }
+
+    /* eviter de cliquer sur les project dans ce menu */
+    body.active .contenu,
+    body.active .liste-travaux {
+      pointer-events: none;
+    }
+
+
   }
-  
