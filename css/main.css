@@ -12,7 +12,7 @@
 }
 
 html {
-  font-size: 14pt;
+  font-size: 16px;
   /* marge sur dorite et gauche */
   margin: 0 15px;
   padding: 0;
@@ -20,11 +20,12 @@ html {
   color-scheme: dark light;
   /* ponctuation pas prise en compte dans la "box" */
   hanging-punctuation: first last;
+  background-color: red;
 }
 
 body {
   background: var(--background);
-  font-family: 'Founders Grotesk', sans-serif;
+  font-family: 'PP Neue Montreal', sans-serif;
   font-weight: normal;
   line-height: 1.75;
   color: var(--text);
@@ -57,12 +58,20 @@ p {
   margin-bottom: 1rem;
 }
 
-h1,
+h1{
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3;
+  /* equilibrage du texte a la ligne */
+  text-wrap: balance;
+}
+
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Founders Grotesk', sans-serif;
+  font-family: 'PP Neue Montreal', sans-serif;
   font-weight: normal;
   line-height: 1.3;
   /* equilibrage du texte a la ligne */
