@@ -20,7 +20,7 @@ html {
   color-scheme: dark light;
   /* ponctuation pas prise en compte dans la "box" */
   hanging-punctuation: first last;
-  background-color: red;
+  /* background-color: red; */
 }
 
 body {
@@ -81,23 +81,23 @@ h5 {
 /* taille base */
 h1 {
   margin-top: 0;
-  font-size: 11.089rem;
+  font-size: var(--fx-xl);
 }
 
 h2 {
-  font-size: 6.854rem;
+  font-size: var(--fs-800);
 }
 
 h3 {
-  font-size: 4.236rem;
+  font-size: var(--fs-700);
 }
 
 h4 {
-  font-size: 2.618rem;
+  font-size: var(--fs-600);
 }
 
 h5 {
-  font-size: 1.618rem;
+  font-size: var(--fs-500);
 }
 
 small,
@@ -147,3 +147,18 @@ ul {
 a{
   text-decoration: none;
 }
+
+
+/* typographie flexible - modern css */
+:root{
+--fx-xl: clamp(2rem, 15vw,21.089rem);
+--fs-800: 6.854rem;
+--fs-700: 4.236rem;
+--fs-600: clamp(1.518rem, 2vw, 4.618rem);
+--fs-500: 1.618rem ;
+--fs-400: 1rem;
+}
+
+
+/* seance du 8, j'ai compris un peu le clamp, faut changer mtn pcq apres c le bordel, 
+regarde aussi le padding responsive pour mieux saparé dans les section de page photo */

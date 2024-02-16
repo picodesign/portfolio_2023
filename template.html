@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="template.css">
+    <script src="/app.js" defer></script>
+    <title>36 Dayoftype</title>
+</head>
+
+<body>
+
+    <!-- Couverture -->
+    <div class="cover">
+        <div class="titre">36 Days Of Type</div>
+        <div class="menu">
+            <ul class="liste">
+                <li class="lien"><a href="index.html">Projects</a></li>
+                <li class="lien"><a href="#.html">About</a></li>
+                <li class="lien"><a href="#.html">FR</a></li>
+                <li class="lien"><a href="#.html">IT</a></li>
+            </ul>
+        </div>
+        <video id="videoPlayer" class="image" control="false" autoplay="autoplay" loop="true">
+            <source src="/images/36DOT/5_light.webm" type="video/webm">
+        </video>
+        <div class="colab">
+                Collaboration avec
+                <span><a href="https://www.grapheine.com/">Grapheine.fr</a></span>
+                <span>Project de 2022</span>
+        </div>
+    </div>
+
+    <!-- Contenu en dessous de la ligne de flottaison -->
+    <div class="below-fold">
+        <!-- Galerie d'images -->
+        <div class="gallery">
+            <div class="image-container">
+                <img src="placeholder.jpg" alt="Image Placeholder" class="gallery-image">
+                <div class="image-title"></div>
+            </div>
+            <div class="image-container">
+                <img src="placeholder.jpg" alt="Image Placeholder" class="gallery-image">
+                <div class="image-title"></div>
+            </div>
+            <div class="image-container">
+                <img src="placeholder.jpg" alt="Image Placeholder" class="gallery-image">
+                <div class="image-title"></div>
+            </div>
+            <div class="image-container">
+                <img src="placeholder.jpg" alt="Image Placeholder" class="gallery-image">
+                <div class="image-title"></div>
+            </div>
+    
+           
+            <!-- Ajoutez autant d'images que nécessaire -->
+        </div>
+    </div>
+
+    <!-- script pour changer la video par rapport au theme -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const videoPlayer = document.getElementById('videoPlayer');
+            
+            if (prefersDarkMode) {
+                videoPlayer.src = '/images/36DOT/5_dark.webm';
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

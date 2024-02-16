@@ -14,7 +14,7 @@
     padding: 0;
     vertical-align: bottom;
     line-height: 0.72;
-    font-size: 15vw;
+    font-size: var(--fx-xl);
     color: var(--text);
   }
 
