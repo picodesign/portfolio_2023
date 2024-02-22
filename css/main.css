@@ -14,7 +14,7 @@
 html {
   font-size: 16px;
   /* marge sur dorite et gauche */
-  margin: 0 15px;
+  margin: 0 1em;
   padding: 0;
   /* theme de site */
   color-scheme: dark light;
@@ -107,6 +107,7 @@ small,
 
 /* correction ul */
 ul {
+  list-style: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
@@ -119,7 +120,7 @@ ul {
   :has(:target) {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
-    /* meite marge pour que ca soit agreable et non comme wikipedia */
+    /*  marge pour que ca soit agreable et non comme wikipedia */
   }
 }
 
@@ -158,7 +159,3 @@ a{
 --fs-500: 1.618rem ;
 --fs-400: 1rem;
 }
-
-
-/* seance du 8, j'ai compris un peu le clamp, faut changer mtn pcq apres c le bordel, 
-regarde aussi le padding responsive pour mieux saparé dans les section de page photo */

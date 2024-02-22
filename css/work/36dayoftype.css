@@ -50,10 +50,10 @@
 .menu .liste {
     text-decoration: none;
     list-style: none;
+    justify-content: right;
     display: flex;
-    /* background-color: green; */
     flex-direction: row;
-    justify-content: space-between;
+    gap: 4em;
 }
 
 

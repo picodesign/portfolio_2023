@@ -42,7 +42,7 @@ function setTheme() {
   const now = new Date();
   const hours = now.getHours();
 
-  const isDaytime = hours >= 8 && hours < 18;
+  const isDaytime = hours >= 8 && hours < 19;
 
   const root = document.documentElement;
   root.style.setProperty('--text', isDaytime ? '#1c1917' : '#E8E5E3');
