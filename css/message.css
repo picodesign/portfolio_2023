@@ -1,0 +1,60 @@
+html {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Styles pour le formulaire */
+.contenu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: clamp(18rem, 30em, 50vw);
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 1em 1em 1em 0.5em;
+}
+
+label {
+    margin: 1em;
+    margin-bottom: 0.5em;
+    color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: var(-fs--400);
+}
+
+textarea {
+    height: clamp(8rem, -300em, 50vh)
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent);
+
+}

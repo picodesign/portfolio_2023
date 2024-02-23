@@ -4,22 +4,6 @@ html {
     font: inherit;
 }
 
-.menu {
-    position: fixed;
-    padding: 1em 1em 0 0;
-
-    display: flex;
-    width: 100vw;
-    gap: 4em;
-    justify-content: flex-end;
-
-    z-index: 4;
-}
-
-.menu a {
-    color: var(--text);
-}
-
 #overlay-light {
     position: absolute;
     width: 100vw;

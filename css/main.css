@@ -33,7 +33,8 @@ body {
   cursor:url('/images/main/cursor.png') 0 0, auto;
 }
 
-a,a:hover, button:hover, a::before, .filtre{
+/* curseur hover */
+a,a:hover, button:hover, a::before, .filtre,input[type="submit"]:hover{
   cursor : url('/images/main/loader.png') 0 0, pointer;
 }
 
@@ -158,4 +159,22 @@ a{
 --fs-600: clamp(1.518rem, 2vw, 4.618rem);
 --fs-500: 1.618rem ;
 --fs-400: 1rem;
+}
+
+
+/* menu pour le site */
+.menu {
+  position: fixed;
+  padding: 1em 1em 0 0;
+
+  display: flex;
+  width: 100vw;
+  gap: 4em;
+  justify-content: flex-end;
+
+  z-index: 4;
+}
+
+.menu a {
+  color: var(--text);
 }

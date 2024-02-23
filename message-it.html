@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Shortcut icon" type="x-icon" href="/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaggio</title>
+    <meta name="description"
+        content="Modulo di contatto per inviare un messaggio a Alessandro Capiluppi Ansquer, studente di DNMADE appassionato di design grafico e comunicazione visiva.">
+    <!-- Metatag per i motori di ricerca -->
+    <meta name="keywords"
+        content="Alessandro Ansquer, Alessandro Capiluppi, DNMADE, Designer grafico, Design visivo, Tipografia, Comunicazione visiva, Portfolio, Modulo di contatto">
+    <meta name="author" content="Alessandro Capiluppi Ansquer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.picodesign.fr/message-it">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Modulo di Contatto">
+    <meta property="og:description"
+        content="Modulo di contatto per inviare un messaggio a Alessandro Capiluppi Ansquer, studente di DNMADE appassionato di design grafico e comunicazione visiva.">
+    <meta property="og:image" content="lien-vers-une-image.jpg">
+    <meta property="og:url" content="https://www.picodesign.fr/message-it">
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@picodesign.it">
+    <meta name="twitter:title" content="Modulo di Contatto">
+    <meta name="twitter:description"
+        content="Modulo di contatto per inviare un messaggio a Alessandro Capiluppi Ansquer, studente di DNMADE appassionato di design grafico e comunicazione visiva.">
+    <meta name="twitter:image" content="lien-vers-une-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/message.css">
+    <!-- Font -->
+    <link rel="stylesheet" href="css/font/font.css">
+
+    <!-- JavaScript -->
+    <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Menù -->
+    <ul class="menu">
+        <li class="lien"><a href="/index.html">Progetti</a></li>
+        <li class="lien"><a href="/about-it.html">Chi sono</a></li>
+        <li class="lien"><a href="/message.html">FR</a></li>
+        <li class="lien"><a href="/message-it.html">IT</a></li>
+    </ul>
+
+    <div class="contenu">
+        <form action="/php/send_email_it.php" method="post">
+            <label for="name">Nome :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Messaggio :</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Invia">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Shortcut icon" type="x-icon" href="/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <meta name="description"
+        content="Formulaire de contact permettant d'envoyer un message à Alessandro Capiluppi Ansquer, étudiant en DNMADE et passionné de design graphique et de communication visuelle.">
+    <!-- Balises méta pour les moteurs de recherche -->
+    <meta name="keywords"
+        content="Alessandro Ansquer, Alessandro Capiluppi, DNMADE, Designer graphique, Conception visuelle, Typographie, Communication visuelle, Portfolio, Formulaire de contact">
+    <meta name="author" content="Alessandro Capiluppi Ansquer">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.picodesign.fr/message">
+    <!-- Balise Open Graph -->
+    <meta property="og:title" content="Formulaire de Contact">
+    <meta property="og:description"
+        content="Formulaire de contact permettant d'envoyer un message à Alessandro Capiluppi Ansquer, étudiant en DNMADE et passionné de design graphique et de communication visuelle.">
+    <meta property="og:image" content="lien-vers-une-image.jpg">
+    <meta property="og:url" content="https://www.picodesign.fr/message">
+    <!-- Balise Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@picodesign.fr">
+    <meta name="twitter:title" content="Formulaire de Contact">
+    <meta name="twitter:description"
+        content="Formulaire de contact permettant d'envoyer un message à Alessandro Capiluppi Ansquer, étudiant en DNMADE et passionné de design graphique et de communication visuelle.">
+    <meta name="twitter:image" content="lien-vers-une-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/message.css">
+    <!-- font -->
+    <link rel="stylesheet" href="css/font/font.css">
+
+    <!-- JavaScript -->
+    <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- menu -->
+    <ul class="menu">
+        <li class="lien"><a href="/index.html">Projets</a></li>
+        <li class="lien"><a href="/about.html">À propos</a></li>
+        <li class="lien"><a href="/message.html">FR</a></li>
+        <li class="lien"><a href="/message-it.html">IT</a></li>
+    </ul>
+
+    <div class="contenu">
+        <form action="/php/send_email.php" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+</body>
+
+</html>
