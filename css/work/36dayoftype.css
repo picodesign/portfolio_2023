@@ -26,6 +26,7 @@
 .colab {
     grid-area: 3 / 1 / 4 / 2;
 }
+
 /* fin grille */
 
 /* couleur liens */
@@ -130,12 +131,12 @@ span a {
 
 @media (max-width: 750px) {
     .menu {
-        position:relative;
-        padding: 1em 1em 0 1em;
+        position: relative;
         display: flex;
-        width: 100vw;
+        justify-content: space-between;
         gap: auto;
-        justify-content:space-evenly;
+        padding: 1em 0;
+        width: 100%;
         z-index: 4;
     }
 
@@ -146,12 +147,9 @@ span a {
     .cover {
         display: flex;
         flex-direction: column;
-        /* grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr); */
-        grid-column-gap: 20px;
-        grid-row-gap: 40px;
-        height: 100vh;
+        height: 100%;
         padding-top: 15px;
+        border: 2px solid red;
     }
 
     .titre {
@@ -159,14 +157,15 @@ span a {
         white-space: nowrap;
         vertical-align: top;
         line-height: 0.78;
-        font-size: 2.68rem !IMPORTANT;
+        font-size: 2.68rem !important;
     }
 
     .below-fold {
         position: relative;
         min-height: 100vh;
-        padding: 30% 5% 5%;
-        /* border: 5px solid blue; */
+        padding: 0;
+        /* padding: 30% 5% 5%; */
+        border: 2px solid blue;
     }
 
     .gallery {

@@ -1,5 +1,5 @@
 gsap.to('#overlay-dark',2, {
-  top:"-100%",
+  top:"-200%",
   ease:"power3.inOut",
   delay:4,
 });

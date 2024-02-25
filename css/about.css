@@ -1,35 +1,45 @@
 html {
-    margin: 0;
+    margin: 0 -1em;
     padding: 0;
     font: inherit;
     box-sizing: border-box;
+    overflow:hidden;
 }
 /* j'efface le fond de base pour eviter des bug visuel avec les proprieté Difference dans cette page*/
-body{
-    background-color: rgba(255, 255, 255, 0)!important;
-}
+/* body{
+    background-color: rgba(255, 0, 0, 0)!important;
+} */
 
 #overlay-light {
     position: absolute;
-    width: 98vw;
-    height: 100vh;
+    width: 100vw;
+    height: 200vh;
     background-color: var(--background);
     z-index: 1;
 }
 
 #overlay-dark {
     position: absolute;
-    width: 98vw;
-    height: 100vh;
+    width: 100vw;
+    height: 200vh;
     background-color: var(--text);
     z-index: 2;
 }
 
 .content {
-    width: 98vw;
+    /* width: 100vw; */
     font-size: var(--fs-400);
     padding: 1em;
 }
+.menu {
+    position: fixed;
+    padding: 1em 1em 2em 1em;
+    display: flex;
+    width: 100vw;
+    gap: 4em;
+    justify-content: flex-end;
+    z-index: 4;
+  }
 
 .half1 {
     display: flex;
@@ -120,6 +130,7 @@ body{
     height: 25px;
     display: flex;
     padding: 0 2em;
+    align-items: center;
 }
 
 .row>.col {
@@ -129,7 +140,11 @@ body{
 
 .row>.col:first-child {
     flex: 2;
+    /* border: 2px solid red; */
+
 }
+
+
 
 
 .row>.col:nth-child(2) {
@@ -154,6 +169,7 @@ body{
     white-space: nowrap;
     overflow: hidden;
     z-index: 3;
+    border: 3px solid red ;
 }
 
 .marquee span {
@@ -162,7 +178,7 @@ body{
     letter-spacing: -10px;
     color: var(--text);
     mix-blend-mode: normal !important;
-    font-size: var(--fx-xl);
+    font-size: var(--fs-900);
     text-transform: uppercase;
     display: inline-block;
     margin-left: -10%;
@@ -177,4 +193,119 @@ body{
     100% {
         transform: translateX(-100%)
     }
+}
+
+/* message */
+
+
+.message{
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 2px solid red ;
+    width: 100%;
+    padding: 0 1em;
+    z-index: 9;
+    font-size: var(--fs--1);
+    color: var(--primary);
+    /* seance du 25, je pense vouloirfaire comme la page intex avec le titre et le but c'est de mettre le message en bas de la page */
+}
+
+
+.texte a {
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+    padding: 0 1em;
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Empêche le retour à la ligne car ca arrive sur les iphone 12... */
+
+}
+.texte a:hover {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    border-radius: 15px;
+    padding: 0 1em;
+    color: var(--background) 
+}
+
+#small{
+    font-size: var(--fs--1);
+}
+
+
+
+/* ordi petit scroll */
+@media (max-height: 900px) {
+    
+    html {
+        margin: 0 -1em;
+        padding: 0;
+        font: inherit;
+        box-sizing: border-box;
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+   
+}
+/* mobile */
+@media (max-width: 925px) {
+    
+    html {
+        margin: 0 -1em;
+        padding: 0;
+        font: inherit;
+        box-sizing: border-box;
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+    
+    /* menu */
+    .menu {
+        font-size: var(--fs-400);
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: auto;
+        padding: 1em 3em;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .menu a {
+        color: var(--text);
+    }
+
+    /* sim.display colum */
+    .half1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+    
+    .half1 .demi {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+    
+    .half1 .demi2 {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+
+    .row>#titre {
+        flex: 10;
+    }
+
+    .row{
+        /* border: 2px solid cyan; */
+        line-height: 0.7rem;
+    }
+
+    .marquee{
+        display: none;
+
+    };
+
+ 
 }
