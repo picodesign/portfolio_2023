@@ -13,8 +13,7 @@
 
 html {
   font-size: 16px;
-  /* marge sur dorite et gauche */
-  margin: 0 1em;
+  
   padding: 0;
   /* theme de site */
   color-scheme: dark light;
@@ -24,6 +23,8 @@ html {
 }
 
 body {
+  /* marge sur dorite et gauche */
+  margin: 0 1em;
   background: var(--background);
   font-family: 'PP Neue Montreal', sans-serif;
   font-weight: normal;
@@ -165,14 +166,13 @@ a{
 /* menu pour le site */
 .menu {
   position: fixed;
-  padding: 1em 1em 0 0;
-
+  padding: 1em 1em 2em 1em;
   display: flex;
-  width: 100vw;
+  width: 97.5vw;
   gap: 4em;
   justify-content: flex-end;
-
   z-index: 4;
+  /* border: solid blue 2px; */
 }
 
 .menu a {

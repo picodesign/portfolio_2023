@@ -2,11 +2,16 @@ html {
     margin: 0;
     padding: 0;
     font: inherit;
+    box-sizing: border-box;
+}
+/* j'efface le fond de base pour eviter des bug visuel avec les proprieté Difference dans cette page*/
+body{
+    background-color: rgba(255, 255, 255, 0)!important;
 }
 
 #overlay-light {
     position: absolute;
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     background-color: var(--background);
     z-index: 1;
@@ -14,14 +19,14 @@ html {
 
 #overlay-dark {
     position: absolute;
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     background-color: var(--text);
     z-index: 2;
 }
 
 .content {
-    width: 100%;
+    width: 98vw;
     font-size: var(--fs-400);
     padding: 1em;
 }
