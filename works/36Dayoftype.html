@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/work/36dayoftype.css">
+    <script src="/js/main.js" defer></script>
     <script src="/js/app.js" defer></script>
-    <!-- <script src="/js/main.js" defer></script> -->
-    <!-- il y a un bug sur la version light quan j'active le js -->
     <title>36 Day of type</title>
 </head>
 
@@ -26,7 +25,10 @@
         <div class="titre">36 Days Of Type</div>
 
         <video id="videoPlayer" class="image" control="false" autoplay="autoplay" loop="true">
-            <source src="/images/36DOT/5_light.webm" type="video/webm">
+            <source id="light_webm" type="video/webm" src="/images/36DOT/5_light.webm" />
+            <source id="light_mp4" type="video/mp4" src="/images/36DOT/5_light.mp4" />
+            <source id="dark_webm" type="video/webm" src="/images/36DOT/5_dark.webm" />
+            <source id="dark_mp4" type="video/mp4" src="/images/36DOT/5_dark.mp4" />
         </video>
         <div class="colab">
             Collaboration avec
@@ -70,18 +72,9 @@
         </div>
     </div>
 
-    <!-- script pour changer la video par rapport au theme -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const videoPlayer = document.getElementById('videoPlayer');
-
-            if (prefersDarkMode) {
-                videoPlayer.src = '/images/36DOT/5_dark.webm';
-            }
-        });
+   
     </script>
-
 
 </body>
 

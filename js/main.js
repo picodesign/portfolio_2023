@@ -30,28 +30,46 @@ filterButtons.forEach((button) => {
   });
 });
 
-
 // menu mobile
-document.getElementById('check').addEventListener('change', function() {
-  document.body.classList.toggle('active', this.checked);
+document.getElementById("check").addEventListener("change", function () {
+  document.body.classList.toggle("active", this.checked);
 });
 
+// themes selon l'heure
+function setThemeAndVideo() {
+  console.log("La fonction setThemeAndVideo est exécutée.");
 
-// thème sombre-noir par rapport a lheure
-function setTheme() {
   const now = new Date();
   const hours = now.getHours();
+  console.log("Heures actuelles :", hours);
 
-  const isDaytime = hours >= 8 && hours < 19;
+  const isDaytime = hours >= 8 && hours < 14;
+  console.log("Est-ce la journée ?", isDaytime);
 
   const root = document.documentElement;
-  root.style.setProperty('--text', isDaytime ? '#1c1917' : '#E8E5E3');
-  root.style.setProperty('--background', isDaytime ? '#efebeb' : '#141010');
-  root.style.setProperty('--primary', isDaytime ? '#524a42' : '#BDB5AD');
-  root.style.setProperty('--secondary', isDaytime ? '#b2b4a2' : '#5b5d4b');
-  root.style.setProperty('--accent', isDaytime ? '#6f775f' : '#98a088');
+  root.style.setProperty("--text", isDaytime ? "#1c1917" : "#E8E5E3");
+  root.style.setProperty("--background", isDaytime ? "#efebeb" : "#141010");
+  root.style.setProperty("--primary", isDaytime ? "#524a42" : "#BDB5AD");
+  root.style.setProperty("--secondary", isDaytime ? "#b2b4a2" : "#5b5d4b");
+  root.style.setProperty("--accent", isDaytime ? "#6f775f" : "#98a088");
+
+  const videoPlayer = document.getElementById("videoPlayer");
+  const lightSources = document.querySelectorAll("#light_webm, #light_mp4");
+  const darkSources = document.querySelectorAll("#dark_webm, #dark_mp4");
+
+  if (isDaytime) {
+    console.log('C\'est la journée. Affichage des vidéos "light".');
+    lightSources.forEach((source) => videoPlayer.appendChild(source));
+    darkSources.forEach((source) => source.remove());
+  } else {
+    console.log('C\'est la nuit. Affichage des vidéos "dark".');
+    darkSources.forEach((source) => videoPlayer.appendChild(source));
+    lightSources.forEach((source) => source.remove());
+  }
 }
-window.onload = setTheme;
+
+window.addEventListener("load", setThemeAndVideo);
+
 // fin thèmes
 
 // Animation css visble seulement en hiver
@@ -60,16 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const moisActuel = new Date().getMonth() + 1; // Les mois commencent à partir de 0
 
   if (moisActuel >= 12 || moisActuel <= 2) {
-      // Afficher les div
-      const snowDiv = document.querySelector('.snow');
-      snowDiv.style.display = 'block';
-      const calques = document.querySelectorAll('.snow__calque');
-      calques.forEach(calque => {
-          calque.style.display = 'block';
-      });
-      console.log("Nous sommes en hiver. Affichage des éléments.");
-
-  } else{
+    // Afficher les div
+    const snowDiv = document.querySelector(".snow");
+    snowDiv.style.display = "block";
+    const calques = document.querySelectorAll(".snow__calque");
+    calques.forEach((calque) => {
+      calque.style.display = "block";
+    });
+    console.log("Nous sommes en hiver. Affichage des éléments.");
+  } else {
     console.log("Nous ne sommes pas en hiver. Les éléments restent masqués.");
   }
 });
