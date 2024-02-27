@@ -13,7 +13,7 @@
 
 html {
   font-size: 16px;
-  
+
   padding: 0;
   /* theme de site */
   color-scheme: dark light;
@@ -31,12 +31,17 @@ body {
   line-height: 1.75;
   color: var(--text);
   min-height: 100svh;
-  cursor:url('/images/main/cursor.png') 0 0, auto;
+  cursor: url('/images/main/cursor.png') 0 0, auto;
 }
 
 /* curseur hover */
-a,a:hover, button:hover, a::before, .filtre,input[type="submit"]:hover{
-  cursor : url('/images/main/loader.png') 0 0, pointer;
+a,
+a:hover,
+button:hover,
+a::before,
+.filtre,
+input[type="submit"]:hover {
+  cursor: url('/images/main/loader.png') 0 0, pointer;
 }
 
 /* responsive images/videos */
@@ -54,13 +59,14 @@ p,
 li {
   max-width: var(--p-max-width, 70ch);
   text-wrap: pretty;
+  
 }
 
 p {
   margin-bottom: 1rem;
 }
 
-h1{
+h1 {
   font-family: 'PP Neue Montreal', sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -85,20 +91,25 @@ h1 {
   margin-top: 0;
   font-size: var(--fx-xl);
 }
-
-h2 {
-  font-size: var(--fs-800);
+h2{
+  font-size: var(--fs-900);
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: var(--fs-700);
+  font-size: var(--fs-800);
+  margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
 }
 
 h5 {
+  font-size: var(--fs-600);
+}
+
+h6 {
   font-size: var(--fs-500);
 }
 
@@ -139,15 +150,15 @@ ul {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text:#E8E5E3;
-    --background:#141010  ;
-    --primary:#BDB5AD;
+    --text: #E8E5E3;
+    --background: #141010;
+    --primary: #BDB5AD;
     --secondary: #5b5d4b;
     --accent: #98a088;
   }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -162,7 +173,7 @@ a{
 --fs-400: 1rem;
 } */
 
-:root {
+/* :root {
   --fs--2: clamp(0.434rem, 0.407rem + 0.1199vi, 0.5rem);
   --fs--1: clamp(0.5208rem, 0.4271rem + 0.4167vi, 0.75rem);
   --fs-400: clamp(0.625rem, 0.4205rem + 0.9091vi, 1.125rem);
@@ -171,9 +182,43 @@ a{
   --fs-700: clamp(1.08rem, -0.0314rem + 4.9398vi, 3.7969rem);
   --fs-800: clamp(1.296rem, -0.5037rem + 7.9988vi, 5.6953rem);
   --fs-900: clamp(1.5552rem, -1.3034rem + 12.705vi, 8.543rem);
-  --fx-xl: clamp(2rem, 15vw,21.089rem);
+  --fx-xl: clamp(2rem, 15vw, 21.089rem);
 
+  --vh: 1vh;
+} */
+:root {
+  --fs--2: clamp(0.5556rem, 0.6843rem + -0.1661vi, 0.651rem);
+  --fs--1: clamp(0.7813rem, 0.7631rem + 0.0906vi, 0.8333rem);
+  --fs-400: clamp(0.9375rem, 0.8288rem + 0.5435vi, 1.25rem);
+  --fs-500: clamp(1.125rem, 0.8641rem + 1.3043vi, 1.875rem);
+  --fs-600: clamp(1.35rem, 0.8413rem + 2.5435vi, 2.8125rem);
+  --fs-700: clamp(1.62rem, 0.7161rem + 4.5196vi, 4.2188rem);
+  --fs-800: clamp(1.944rem, 0.4191rem + 7.6246vi, 6.3281rem);
+  --fs-900: clamp(2.3328rem, -0.1574rem + 12.4511vi, 9.4922rem);
+  --fx-xl: clamp(2rem, 15vw, 21.089rem);
+  --vh: 1vh;
 }
+
+/* 
+EXEMPLE D'UTILISATION 
+element {
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
+
+  - Les unités vh sur mobile (hauteur de la vue) posent problème car le navigateur ne prend pas toujours en compte les éléments comme la barre d'adresse dans le calcul.
+
+  - L'idée est de calculer soi-même la hauteur de la vue avec JavaScript, à l'aide de window.innerHeight.
+
+  - Cette valeur est stockée dans une propriété CSS personnalisée (--vh) définie sur l'élément racine avec document.documentElement.style.
+
+  - En CSS, on définit la hauteur des éléments concernés avec calc() et la propriété --vh au lieu de vh directement.
+
+  - Exemple: height: calc(var(--vh, 1vh) * 100) 
+
+  - Cela permet d'utiliser la valeur calculée en JS à la place du vh par défaut.
+
+  - Un fallback 100vh est prévu au cas où le JS ne fonctionne pas.
+} */
 
 /* menu pour le site */
 .menu {

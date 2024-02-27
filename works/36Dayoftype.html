@@ -15,13 +15,13 @@
 <body>
 
     <!-- Couverture -->
-    <ul class="menu">
-        <li class="lien"><a href="../index.html">Projects</a></li>
-        <li class="lien"><a href="../about.html">About</a></li>
-        <li class="lien"><a href="/works/36Dayoftype.html">FR</a></li>
-        <li class="lien"><a href="/works/36Dayoftype-IT.html">IT</a></li>
-    </ul>
     <div class="cover">
+        <ul class="menu">
+            <li class="lien"><a href="../index.html">Projects</a></li>
+            <li class="lien"><a href="../about.html">About</a></li>
+            <li class="lien"><a href="/works/36Dayoftype.html">FR</a></li>
+            <li class="lien"><a href="/works/36Dayoftype-IT.html">IT</a></li>
+        </ul>
         <div class="titre">36 Days Of Type</div>
         <video id="lightVideo" class="image" control="false" autoplay="autoplay" loop="true">
             <source type="video/webm" src="/images/36DOT/5_light.webm" />
@@ -72,44 +72,6 @@
             </div>
         </div>
     </div>
-    <!-- 
-    <script>
-        function setThemeAndVideo() {
-  console.log('La fonction setThemeAndVideo est exécutée.');
-
-  const now = new Date();
-  const hours = now.getHours();
-  console.log('Heures actuelles :', hours);
-
-  const isDaytime = hours >= 8 && hours < 14;
-  console.log('Est-ce la journée ?', isDaytime);
-
-  const root = document.documentElement;
-  root.style.setProperty('--text', isDaytime ? '#1c1917' : '#E8E5E3');
-  root.style.setProperty('--background', isDaytime ? '#efebeb' : '#141010');
-  root.style.setProperty('--primary', isDaytime ? '#524a42' : '#BDB5AD');
-  root.style.setProperty('--secondary', isDaytime ? '#b2b4a2' : '#5b5d4b');
-  root.style.setProperty('--accent', isDaytime ? '#6f775f' : '#98a088');
-
-  const videoPlayer = document.getElementById('videoPlayer');
-  const lightSources = document.querySelectorAll('#light_webm, #light_mp4');
-  const darkSources = document.querySelectorAll('#dark_webm, #dark_mp4');
-
-  if (isDaytime) {
-      console.log('C\'est la journée. Affichage des vidéos "light".');
-      lightSources.forEach(source => videoPlayer.appendChild(source));
-      darkSources.forEach(source => source.remove());
-  } else {
-      console.log('C\'est la nuit. Affichage des vidéos "dark".');
-      darkSources.forEach(source => videoPlayer.appendChild(source));
-      lightSources.forEach(source => source.remove());
-  }
-}
-
-window.addEventListener('load', setThemeAndVideo);
-
-    </script> -->
-
 </body>
 
 </html>
