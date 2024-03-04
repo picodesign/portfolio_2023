@@ -189,7 +189,7 @@ html {
     white-space: nowrap;
     overflow: hidden;
     z-index: 3;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .marquee span {
@@ -222,13 +222,13 @@ html {
     display: block;
     position: absolute;
     text-align: center;
-    border: 2px solid red;
     width: 100%;
     padding: 0 1em;
-    z-index: 9;
+ 
     font-size: var(--fs--1);
     color: var(--primary);
-    /* seance du 25, je pense vouloirfaire comme la page intex avec le titre et le but c'est de mettre le message en bas de la page */
+
+    z-index: 9;
 }
 
 
@@ -259,7 +259,7 @@ html {
 @media (max-height: 900px) {
     html {
         overflow-y: auto;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
 }
 
@@ -339,7 +339,9 @@ html {
 
     }
 
-    ;
+    .message{
+        bottom: -175vh;
+    }
 
 
 }
