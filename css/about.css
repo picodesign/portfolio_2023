@@ -3,8 +3,9 @@ html {
     padding: 0;
     font: inherit;
     box-sizing: border-box;
-    overflow:hidden;
+    overflow: hidden;
 }
+
 /* j'efface le fond de base pour eviter des bug visuel avec les proprieté Difference dans cette page*/
 /* body{
     background-color: rgba(255, 0, 0, 0)!important;
@@ -31,6 +32,7 @@ html {
     font-size: var(--fs-400);
     padding: 1em;
 }
+
 .menu {
     position: fixed;
     padding: 1em 1em 2em 1em;
@@ -39,7 +41,7 @@ html {
     gap: 4em;
     justify-content: flex-end;
     z-index: 4;
-  }
+}
 
 .half1 {
     display: flex;
@@ -85,28 +87,49 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
+    #overlay-light {
+        position: absolute;
+        width: 100vw;
+        height: 200vh;
+        background-color: var(--text);
+        z-index: 1;
+    }
+    
+    #overlay-dark {
+        position: absolute;
+        width: 100vw;
+        height: 200vh;
+        background-color: var(--background);
+        z-index: 2;
+    }
+    .menu a{
+        mix-blend-mode: difference;
+        color: var(--background);
+        z-index: 6;
+
+    }
     .content>* {
         position: relative;
         z-index: 3;
         mix-blend-mode: difference;
-        color: var(--text);
+        color: var(--background);
     }
 
     .demi>* {
         position: relative;
         z-index: 3;
-        color: var(--text);
+        color: var(--background);
     }
 
     .divider {
         width: 100%;
         height: 1px;
-        background: var(--text);
+        background: var(--background);
         margin: 0.2em 0;
     }
 
     a {
-        color: var(--text);
+        color: var(--background);
         z-index: 5;
     }
 
@@ -144,9 +167,6 @@ html {
 
 }
 
-
-
-
 .row>.col:nth-child(2) {
     flex: 2;
 }
@@ -169,7 +189,7 @@ html {
     white-space: nowrap;
     overflow: hidden;
     z-index: 3;
-    border: 3px solid red ;
+    border: 3px solid red;
 }
 
 .marquee span {
@@ -198,11 +218,11 @@ html {
 /* message */
 
 
-.message{
+.message {
     display: block;
     position: absolute;
     text-align: center;
-    border: 2px solid red ;
+    border: 2px solid red;
     width: 100%;
     padding: 0 1em;
     z-index: 9;
@@ -218,48 +238,52 @@ html {
     padding: 0 1em;
     color: var(--primary);
     transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Empêche le retour à la ligne car ca arrive sur les iphone 12... */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne car ca arrive sur les iphone 12... */
 
 }
+
 .texte a:hover {
     border: 1px solid var(--primary);
     background-color: var(--primary);
     border-radius: 15px;
     padding: 0 1em;
-    color: var(--background) 
+    color: var(--background)
 }
 
-#small{
+#small {
     font-size: var(--fs--1);
 }
 
-
-
 /* ordi petit scroll */
 @media (max-height: 900px) {
-    
     html {
-        margin: 0 -1em;
-        padding: 0;
-        font: inherit;
-        box-sizing: border-box;
-        overflow-y:auto;
+        overflow-y: auto;
         overflow-x: hidden;
     }
-   
 }
+
 /* mobile */
 @media (max-width: 925px) {
-    
+
     html {
         margin: 0 -1em;
         padding: 0;
         font: inherit;
         box-sizing: border-box;
-        overflow-y:auto;
+        overflow-y: auto;
         overflow-x: hidden;
     }
+
+    #overlay-light {
+        height: 280vh;
+    }
     
+    #overlay-dark {
+        height: 280vh;
+       
+    }
+
     /* menu */
     .menu {
         font-size: var(--fs-400);
@@ -275,6 +299,14 @@ html {
     .menu a {
         color: var(--text);
     }
+    @media (prefers-color-scheme: dark) {
+        .menu a{
+            mix-blend-mode: difference;
+            color: var(--background);
+            z-index: 6;
+    
+        }
+    }
 
     /* sim.display colum */
     .half1 {
@@ -282,12 +314,12 @@ html {
         flex-wrap: wrap;
         gap: 2%;
     }
-    
+
     .half1 .demi {
         width: 100%;
         flex: 1 0 100%;
     }
-    
+
     .half1 .demi2 {
         width: 100%;
         flex: 1 0 100%;
@@ -297,15 +329,28 @@ html {
         flex: 10;
     }
 
-    .row{
+    .row {
         /* border: 2px solid cyan; */
         line-height: 0.7rem;
     }
 
-    .marquee{
+    .marquee {
         display: none;
 
-    };
+    }
 
- 
+    ;
+
+
+}
+
+@media (max-width: 430px) {
+
+    .row {
+        height: 2.5rem;
+        line-height: 0.9rem;
+    }
+    .last-divider {
+        height: 3.5em;
+    }
 }

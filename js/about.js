@@ -1,8 +1,30 @@
-gsap.to('#overlay-dark',2, {
-  top:"-200%",
-  ease:"power3.inOut",
-  delay:4,
-});
+const overlayDark = document.querySelector('#overlay-dark');
+
+// taille de l'écran 
+const animateOverlayDark = () => {
+    const animationParams = {
+        duration: 2,
+        ease: "power3.inOut",
+        delay: 4
+    };
+
+    // si mobile
+    if (window.matchMedia('(max-width: 925px)').matches) {
+        // Si oui,-280%
+        gsap.to(overlayDark, {
+            ...animationParams,
+            top: "-280%"
+        });
+    } else {
+        // Sinon,-200%
+        gsap.to(overlayDark, {
+            ...animationParams,
+            top: "-200%"
+        });
+    }
+};
+// appel fonction
+animateOverlayDark();
 
 gsap.from(".divider",3,{
   scaleX:0,
