@@ -1,0 +1,220 @@
+/* Grid setup for the cover section */
+.cover {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    height: calc(var(--vh, 1vh) * 100);
+    /* height: 100vh; */
+    padding-top: 15px;
+    margin-bottom: 4rem;
+}
+
+.titre {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.image {
+    grid-area: 2 / 4 / 4 / 6;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.colab {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+/* fin grille */
+
+/* couleur liens */
+.titre,
+.menu,
+.colab,
+li a {
+    color: var(--text);
+}
+
+.colab,
+span a {
+    color: var(--text);
+}
+
+/* interieur grille */
+.titre {
+    font-size: 5.5vw;
+    /* voir app.js pour scaling */
+    position: fixed;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 1;
+    z-index: 2;
+
+}
+
+.image {
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1em;
+}
+
+
+.colab {
+    font-size: var(--fs-400);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+.colab a {
+    color: var(--text);
+}
+.colab a:hover {
+    text-decoration: underline;
+}
+
+/* espacementligne de flotaison */
+.description{
+    position:sticky;
+    /* border: 2px solid red; */
+    width: 40%;
+    top: 6rem;
+}
+.description a {
+    color: var(--text);
+}
+.description a:hover {
+    text-decoration: underline;
+}
+
+.below-fold {
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 15px 0 45%;
+    /* border: 5px solid blue; */
+}
+
+/* gallerie image a droite */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-row-gap: 4rem;
+    justify-content: flex-end;
+    /* border: 2px solid #0088ff; */
+    margin-bottom: 50px;
+}
+
+/* CSS for the gallery image container */
+.image-container {
+    position: relative;
+}
+.double-container {
+    grid-column: span 2; /* L'élément occupe deux colonnes */
+    position: relative;
+    /* background-color: red; */
+    object-fit:scale-down;
+}
+#player {
+    width: 100%; /* La vidéo prendra 100% de la largeur du parent */
+    /* height: auto; */
+}
+
+/* CSS for the gallery image */
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    object-fit: cover;
+}
+
+/* CSS for the image title */
+.image-title {
+    font-size: var(--fs-400);
+    text-align: center;
+    color: var(--text);
+    position: absolute;
+    /* Positionne le titre par rapport au conteneur parent */
+    bottom: -2rem;
+    /* Place le titre en bas du conteneur parent */
+}
+
+
+
+
+/* sur mobile */
+
+@media (max-width: 750px) {
+ 
+    .menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: auto;
+        padding: 0em 1em;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .menu a {
+        color: var(--text);
+    }
+
+    .cover {
+        display: flex;
+        flex-direction: column;
+        height: calc(var(--vh, 1vh) * 100);
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        gap: 2em;
+        justify-content: space-evenly;
+        margin-bottom: 4rem;
+    }
+
+    .cover > :nth-child(3) {
+        flex-grow: 1;
+      }
+
+    .titre {
+        position: relative;
+        white-space: nowrap;
+        vertical-align: top;
+        line-height: 0.78;
+        font-size: var(--fs-800)!important;
+    }
+    .image {
+        object-fit:cover;
+        width: 100%;
+        height: 30%;
+        padding-bottom: 1em;
+    }
+    /* ligne de flotaison */
+
+    .description{
+        width: 100%;
+    }
+
+    .below-fold {
+        position: relative;
+        min-height: 100vh;
+        padding: 0;
+    }
+
+    .gallery {
+        display: flex;
+        gap: 15px;
+        grid-row-gap: 40px;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+        flex-direction: column;
+        background-color: var(--background);
+    }
+
+    /* video yt */
+    #player {
+        height: 720;
+        width: 405;
+        object-fit:cover;
+    }
+}

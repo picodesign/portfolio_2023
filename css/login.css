@@ -1,0 +1,42 @@
+h3{
+    margin-bottom: 0rem !important;
+}
+
+.message{
+    margin-bottom: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* border: 2px salmon solid; */
+}
+
+input[type=text], input[type=password]{
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid var(--text);
+	background: rgba(var(--background), .2);
+	border-radius: .2em .2em 0 0;
+	/* padding: .4em; */
+	color: var(--primary);
+    margin-bottom:1rem ;
+}
+
+input[type=submit] {
+	appearance: none;
+    border: .2em solid var(--primary);
+	background: hsl(0 0 0/0);
+    margin-top: 1em;
+    padding: 0 1em;
+    color: var(--primary);
+    border-radius: 1em;
+    transition: all 0.3s ease-in-out;
+	&:hover, &:focus, &:active {
+        border: .2em solid var(--primary);
+        background-color: var(--primary);
+        color: var(--background)
+	}
+}
