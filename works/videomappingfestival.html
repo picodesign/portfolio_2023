@@ -39,9 +39,12 @@
     <!-- Contenu en dessous de la ligne de flottaison -->
     <div class="description">
         <h5>Contexte</h5>
-       <p>J'ai eu la chance d'être sélectionné par mon école <a href="https://linktr.ee/dnmade.graphisme">@St_Vincent_de_Paul</a> pour participer au <a href="https://videomappingfestival.com/">Video Mapping Festival</a> #6 qui s'est déroulé à Lille du.</p>
+        <p>J'ai eu la chance d'être sélectionné par mon école <a
+                href="https://linktr.ee/dnmade.graphisme">@St_Vincent_de_Paul</a> pour participer au <a
+                href="https://videomappingfestival.com/">Video Mapping Festival</a> #6 qui s'est déroulé à Lille du
+            vendredi 7 et samedi 8 avril 2023.</p>
         <p>Un challenge créatif de 4 jours en présence d'artistes venant du monde entier. J'ai dirigé mon équipe
-                autour du sujet imposé "conflit d'intérêt" pour un vidéo mapping sur la porte de Roubaix</p>
+            autour du sujet imposé "conflit d'intérêt" pour un vidéo mapping sur la porte de Roubaix</p>
     </div>
     <div class="below-fold">
 
@@ -49,36 +52,69 @@
 
         <!-- Galerie d'images -->
         <div class="gallery">
+            <div class="yt-container">
+                <div id="player"></div>
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script>
+                    let player;
+
+                    function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                            height: '600px',
+                            videoId: 'NLuGfE-3aaM',
+                            playerVars: {
+                                'autoplay': 1,
+                                'controls': 1,
+                                'rel': 0,
+                                'modestbranding': 1,
+                                'loop': 1,
+                                'fs': 1,
+                                'iv_load_policy': 3,
+                                'start': 105,
+                                'enablejsapi': 1,
+                                'origin': window.location.origin
+                            },
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
+                    }
+
+                    function onPlayerReady(event) {
+                        // volume range
+                        // player.setVolume(20);
+                        player.setVolume(2);
+                    }
+                </script>
+            </div>
             <div class="image-container">
                 <video autoplay loop muted class="gallery-image">
-                    <source type="video/webm" src="/images/36DOT/Recap_session_2023_1.webm" />
-                    <source type="video/mp4" src="/images/36DOT/Recap_session_2023_1.mp4" />
+                    <source type="video/webm" src="/images/vm/backstage_timelapse.webm" />
+                    <source type="video/mp4" src="/images/vm/backstage_timelapse.mp4" />
                 </video>
                 <div class="image-title"></div>
             </div>
             <div class="image-container">
                 <video autoplay loop muted class="gallery-image">
-                    <source type="video/webm" src="/images/36DOT/Recap_session_2023_2.webm" />
-                    <source type="video/mp4" src="/images/36DOT/Recap_session_2023_2.mp4" />
+                    <source type="video/webm" src="/images/vm/backstage_timelapse_2.webm" />
+                    <source type="video/mp4" src="/images/vm/backstage_timelapse_2.mp4" />
                 </video>
                 <div class="image-title"></div>
             </div>
             <div class="image-container">
                 <video autoplay loop muted class="gallery-image">
-                    <source type="video/webm" src="/images/36DOT/Recap_session_2023_3.webm" />
-                    <source type="video/mp4" src="/images/36DOT/Recap_session_2023_3.mp4" />
+                    <source type="video/webm" src="/images/vm/backstage_timelapse_3.webm" />
+                    <source type="video/mp4" src="/images/vm/backstage_timelapse_3.mp4" />
                 </video>
                 <div class="image-title"></div>
             </div>
             <div class="image-container">
-                <video autoplay loop muted class="gallery-image">
-                    <source type="video/webm" src="/images/36DOT/Recap_session_2023_4.webm" />
-                    <source type="video/mp4" src="/images/36DOT/Recap_session_2023_4.mp4" />
-                </video>
-                <div class="image-title"></div>
+                    <img class="gallery-image" src="/images/vm/projection.jpg"></img>
+                    <div class="image-title"></div>
+            </div>
+
             </div>
         </div>
-    </div>
 </body>
 
 </html>

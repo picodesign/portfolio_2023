@@ -14,17 +14,28 @@ window.addEventListener('scroll', () => {
 
   // titre description pour chaque image chargé
   document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll('.gallery video');
+    const galleryItems = document.querySelectorAll('.gallery-image');
 
-    videos.forEach(video => {
-        const sources = video.querySelectorAll('source');
-        const videoPath = sources[0].getAttribute('src'); // Prend le chemin de la première source
-        const videoName = videoPath.split('/').pop().split('.')[0]; // Extrait le nom de fichier sans extension
+    galleryItems.forEach(item => {
+        if (item.tagName === 'VIDEO') {
+            const sources = item.querySelectorAll('source');
+            const videoPath = sources[0].getAttribute('src');
+            const videoName = videoPath.split('/').pop().split('.')[0];
 
-        const title = document.createElement('div');
-        title.classList.add('image-title');
-        title.textContent = videoName;
-        video.parentNode.appendChild(title);
+            const title = document.createElement('div');
+            title.classList.add('image-title');
+            title.textContent = videoName;
+            item.parentNode.appendChild(title);
+        } else if (item.tagName === 'IMG') {
+            const imagePath = item.getAttribute('src');
+            const imageName = imagePath.split('/').pop().split('.')[0];
+
+            const title = document.createElement('div');
+            title.classList.add('image-title');
+            title.textContent = imageName;
+            item.parentNode.appendChild(title);
+        }
     });
 });
+
 
