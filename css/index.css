@@ -98,7 +98,7 @@
 
   .filtre h5 {
     margin: 0;
-    padding-top: 10px;
+    padding: .1em 0;
   }
 
   /* selection */
@@ -281,7 +281,7 @@
     }
 
     body.active .filtre {
-      padding: 0 20px;
+      padding: 0.1em 1.5em;
     }
 
     body.active .filtre.active {

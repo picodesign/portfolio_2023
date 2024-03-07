@@ -51,7 +51,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             'loop': 1,
                             'fs': 1,
                             'iv_load_policy': 3,
-                            'start': 0,
+                            'start': 167,
                             'enablejsapi': 1,
                             'origin': window.location.origin
                         },
