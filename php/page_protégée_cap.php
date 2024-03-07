@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/work/cap.css">
+    <link rel="stylesheet" href="../css/work/workmain.css">
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
     <title>Cap Atlantique</title>
@@ -72,7 +72,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 
             <div class="double-container">
-                <video controls loop muted class="gallery-image">
+                <video controls autoplay="false" loop muted class="gallery-image">
                     <source type="video/webm" src="/images/cap/v1.webm" />
                     <source type="video/mp4" src="/images/cap/v1.mp4" />
                 </video>

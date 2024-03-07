@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/work/yuv.css">
+    <link rel="stylesheet" href="../css/work/workmain.css">
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
     <title>Yuv</title>

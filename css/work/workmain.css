@@ -85,28 +85,56 @@ span a {
     background-color: var(--background);
     height: 30rem;
     overflow: hidden;
+    z-index: -1;
 }
 .description h5 {
     margin-bottom: 1rem;
+    z-index: -1;
+
    }
 
 .description h6 {
     margin-bottom: 1rem;
+    z-index: -1;
+
 }
 .description p{
     margin-bottom: 0rem;
+    z-index: -1;
+
 }
 .description a {
     color: var(--text);
+    z-index: -1;
+
 }
 
 .description a:hover {
     text-decoration: underline;
+    z-index: -1;
+
 }
 
 .below-fold {
     position: relative;
     padding: 0 0 10% 45%;
+}
+
+/* liste dans decription  */
+.description ul{
+    /* display: flex; */
+    column-count:2 ;
+    list-style:circle !important;
+    /* hanging-punctuation: none !important; */
+    margin-inline-start: 1em;
+    z-index: -1;
+
+}
+
+.description li{
+    font-size: var(--fs--1);
+    z-index: -1;
+
 }
 
 /* gallerie image a droite */
@@ -175,7 +203,7 @@ span a {
 .gallery-image {
     width: 100%;
     height: 100%;
-    /* background-color: blue; */
+    background-color: var(--primary);
     object-fit: cover;
 }
 
@@ -273,6 +301,8 @@ span a {
     .description {
         width: 100%;
         top: 3rem;
+        z-index: -1;
+
     }
     
     .below-fold {
