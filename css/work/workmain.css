@@ -147,6 +147,15 @@ span a {
     /* border: 2px solid #0088ff; */
     margin-bottom: 50px;
 }
+.font_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-row-gap: 0rem;
+    justify-content: flex-end;
+    /* border: 2px solid #0088ff; */
+    margin-bottom: 50px;
+}
  /* sur mobile ca sera en colonne de deux */
 .gallery_mid {
     display: grid;
@@ -252,7 +261,7 @@ span a {
     width: 100%;
     margin: 1rem 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .bouton a {
@@ -352,21 +361,21 @@ span a {
         
         margin-bottom: 50px;
     }
-
+    
     .gallery2 {
         display: flex;
         flex-direction: column;
         gap: 15px;
         grid-row-gap: 40px;
         justify-content: flex-end;
-
+        
         background-color: var(--background);
-
+        
         margin-bottom: 50px;
         margin-bottom: -50px !important;
         padding-bottom: 100px;
     }
-
+    
     .gallery_mid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -378,8 +387,18 @@ span a {
         
         margin-bottom: 50px;
     }
- 
-
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        grid-row-gap: 0;
+        justify-content: flex-end;
+        
+        background-color: var(--background);
+        
+        margin-bottom: 50px;
+    }
+        
     /* video yt */
     #player {
         height: 720;

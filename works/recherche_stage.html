@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/work/workmain.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <title>Book Vidéo 2022</title>
+</head>
+
+<body>
+
+    <!-- page principale  -->
+    <div class="cover">
+        <ul class="menu">
+            <li class="lien"><a href="../index.html">Projects</a></li>
+            <li class="lien"><a href="../about.html">About</a></li>
+            <li class="lien"><a href="/works/recherche_stage.html">FR</a></li>
+            <li class="lien"><a href="/works/recherche_stage.html">IT</a></li>
+        </ul>
+        <div class="titre">Book Vidéo</div>
+        <video controls autoplay muted class="image">
+            <source type="video/webm" src="/images/recherche_stage/1.webm" />
+            <source type="video/mp4" src="/images/recherche_stage/1.mp4" />
+        </video>
+        <div class="colab">
+            <span>2022</span>
+        </div>
+    </div>
+    <!-- ligne de flotaison -->
+
+    <div class="description">
+        <h6>Vidéo qui regrouppe mes realisation 2022 avant mon stage</h6>
+    </div>
+    <!-- gallerie -->
+    <div class="below-fold">
+        <div class="gallery2">
+            <div class="double-container">
+                <div id="player"></div>
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script>
+                    let player;
+
+                    function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                            height: '600px',
+                            videoId: 'yA8WccG1Gog',
+                            playerVars: {
+                                'autoplay': 0,
+                                'controls': 1,
+                                'rel': 0,
+                                'modestbranding': 1,
+                                'loop': 1,
+                                'fs': 1,
+                                'iv_load_policy': 3,
+                                'start': 0,
+                                'enablejsapi': 1,
+                                'origin': window.location.origin
+                            },
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
+                    }
+
+                    function onPlayerReady(event) {
+                        player.setVolume(10);
+                    }
+                </script>
+            </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/1.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/2.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/3.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/4.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/5.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/6.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/7.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/8.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/9.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/10.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/11.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+        <div class="image-container">
+            <img class="gallery-image" src="/images/recherche_stage/12.jpg"></img>
+            <div class="image-title"></div>
+        </div>
+    </div>
+    </div>
+    <!-- fin -->
+
+</body>
+
+</html>
