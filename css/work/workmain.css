@@ -248,6 +248,36 @@ span a {
 }
 
 
+.bouton {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.bouton a {
+    border: .1em solid var(--primary);
+    border-radius: 1em;
+
+    margin: 2em 0 ;
+    padding: 0 1em;
+
+    text-align: center;
+    font-size: var(--fs-400);
+    color: var(--primary);
+    background: hsl(0 0 0/0);
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: .1em solid var(--primary);
+        background-color: var(--primary);
+        color: var(--background)
+    }
+}
+
 /* sur mobile */
 
 @media (max-width: 750px) {
