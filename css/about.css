@@ -87,24 +87,10 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-    #overlay-light {
-        position: absolute;
-        width: 100vw;
-        height: 200vh;
-        background-color: var(--text);
-        z-index: 1;
-    }
     
-    #overlay-dark {
-        position: absolute;
-        width: 100vw;
-        height: 200vh;
-        background-color: var(--background);
-        z-index: 2;
-    }
     .menu a{
         mix-blend-mode: difference;
-        color: var(--background);
+        color: var(--text);
         z-index: 6;
 
     }
@@ -112,24 +98,24 @@ html {
         position: relative;
         z-index: 3;
         mix-blend-mode: difference;
-        color: var(--background);
+        color: var(--text);
     }
 
     .demi>* {
         position: relative;
         z-index: 3;
-        color: var(--background);
+        color: var(--text);
     }
 
     .divider {
         width: 100%;
         height: 1px;
-        background: var(--background);
+        background: var(--text);
         margin: 0.2em 0;
     }
 
     a {
-        color: var(--background);
+        color: var(--text);
         z-index: 5;
     }
 
@@ -281,6 +267,7 @@ html {
     
     #overlay-dark {
         height: 280vh;
+
        
     }
 
@@ -302,9 +289,8 @@ html {
     @media (prefers-color-scheme: dark) {
         .menu a{
             mix-blend-mode: difference;
-            color: var(--background);
+            color: var(--text);
             z-index: 6;
-    
         }
     }
 

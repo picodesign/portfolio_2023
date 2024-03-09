@@ -254,7 +254,8 @@
 
     .contenu,
     .liste-travaux,
-    .filtrers_card {
+    .filtrers_card,
+    .mobilecontact {
       transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
@@ -279,6 +280,17 @@
     body.active .filtrers_card {
       opacity: 100%;
     }
+
+    /* partie contact mobile, c'est de la manip mais bon... ca marche */
+    body.active .filtrers_card .mobilecontact{
+      display: block !important;
+      margin-top: 2em ;
+
+    }
+    body.active .filtrers_card .mobilecontact a{
+      color: #b2b4a2 !important ;
+    }
+    /* fin contact mobile */
 
     body.active .filtre {
       padding: 0.1em 1.5em;
