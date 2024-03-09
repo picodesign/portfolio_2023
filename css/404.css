@@ -1,0 +1,12 @@
+.messageserv{
+    /* border: 2px solid red; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.mini{
+    font-size: var(--fs--1);
+}
