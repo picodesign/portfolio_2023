@@ -13,14 +13,31 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université Catholique de Lille</title>
+    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <meta name="description" content="Animation sur After Effects des différents emblèmes redessiné par Graphéine pour l'université catholique de Lille.">
+    <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
+    <meta name="keywords" content="Université Catholique de Lille, Graphéine, Stage 2023, Refonte emblème, Animation, After Effects, Emblème, Changements, Redessiné, Graphisme, Design, Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">
+    <link rel="canonical" href="https://picodesign.fr/ucl">
+    <!-- Balises Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Université Catholique de Lille">
+    <meta property="og:url" content="https://picodesign.fr/php/login_ucl.html">
+    <meta property="og:description" content="Animation sur After Effects des différents emblèmes redessiné par Graphéine pour l'université catholique de Lille.">
+    <!-- Balises Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Université Catholique de Lille">
+    <meta name="twitter:description" content="Animation sur After Effects des différents emblèmes redessiné par Graphéine pour l'université catholique de Lille.">
+    <!-- font -->
+    <link rel="stylesheet" href="../css/font/font.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/work/workmain.css">
     <link rel="stylesheet" href="../css/work/ucl.css">
+    <!-- JavaScript -->
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
-    <title>Université Catholique de Lille</title>
 </head>
 
 <body>

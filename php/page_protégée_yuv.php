@@ -13,13 +13,30 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuv Beauty</title>
+    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <meta name="description" content="Pour compléter la charte graphique conçue par Graphéine, j'ai été chargé d'approfondir quelques idées pour les animations de la marque.">
+    <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
+    <meta name="keywords" content="Yuv Beauty, Graphéine, Stage 2023, Animation, Motion 3D, Motion texte, Pictos, Coloration professionnelle, Innovant, Cheveux, Nuances, Cartouches d'aluminium, Économie circulaire, Design, Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">
+    <link rel="canonical" href="https://picodesign.fr/yuv">
+    <!-- Balises Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yuv Beauty">
+    <meta property="og:url" content="https://picodesign.fr/php/page_protégée_yuv.html">
+    <meta property="og:description" content="Pour compléter la charte graphique conçue par Graphéine, j'ai été chargé d'approfondir quelques idées pour les animations de la marque.">
+    <!-- Balises Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yuv Beauty">
+    <meta name="twitter:description" content="Pour compléter la charte graphique conçue par Graphéine, j'ai été chargé d'approfondir quelques idées pour les animations de la marque.">
+    <!-- font -->
+    <link rel="stylesheet" href="../css/font/font.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/work/workmain.css">
+    <!-- JavaScript -->
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
-    <title>Yuv</title>
 </head>
 
 <body>
