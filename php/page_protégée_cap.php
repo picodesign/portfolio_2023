@@ -13,13 +13,30 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Atlantique</title>
+    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <meta name="description" content="Annimation pour CapAtlantique">
+    <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
+    <meta name="keywords" content="Cap Atlantique, Graphéine, Stage 2023, Animation 3D, Sel de Guérande, Logo, Graphisme, Animation, Recherches, Design, Collaboration, Portfolio, Alessandro, Alessandro Ansquer,Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle, Arts graphiques, Création artistique, Graphéine, Cap Atlantique, Guérande, Logo, Animation 3D">
+    <link rel="canonical" href="https://picodesign.fr/CapAtlantique">
+    <!-- Balises Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cap Atlantique">
+    <meta property="og:url" content="https://picodesign.fr/php/login_cap.php">
+    <meta property="og:description" content="Annimation pour CapAtlantique">
+    <!-- Balises Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cap Atlantique">
+    <meta name="twitter:description" content="Annimation pour CapAtlantique">
+    <!-- font -->
+    <link rel="stylesheet" href="../css/font/font.css">
+    <!-- css -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/work/workmain.css">
+    <!-- js -->
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
-    <title>Cap Atlantique</title>
 </head>
 
 <body>

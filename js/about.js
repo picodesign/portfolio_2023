@@ -13,7 +13,7 @@ const animateOverlayDark = () => {
         // Si oui,-280%
         gsap.to(overlayDark, {
             ...animationParams,
-            top: "-280%"
+            top: "-350%"
         });
     } else {
         // Sinon,-200%

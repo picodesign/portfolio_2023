@@ -13,13 +13,30 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confluence</title>
+    <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <meta name="description" content="Déclinaisons de la charte graphique sur différents supports.">
+    <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
+    <meta name="keywords" content="Confluence, Graphéine, Stage 2023, Chartre graphique, Déclinaisons, Supports de communication, Papier à entête, Newsletter, Carte de correspondance, Carte de visite, Plaquette  de présentation, Signature mail, Bannière réseaux sociaux, Posts réseaux sociaux, Vignette vidéo, Habillage vidéo, Badge, Kakémono, Powerpoint, Fond d'écran, Communication visuelle, Design graphique,  Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">
+    <link rel="canonical" href="https://picodesign.fr/confluence">
+    <!-- Balises Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Confluence">
+    <meta property="og:url" content="https://picodesign.fr/php/login_confluence.php">
+    <meta property="og:description" content="Déclinaisons de la charte graphique sur différents supports.">
+    <!-- Balises Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Confluence">
+    <meta name="twitter:description" content="Déclinaisons de la charte graphique sur différents supports.">
+    <!-- font -->
+    <link rel="stylesheet" href="../css/font/font.css">
+    <!-- css -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/work/workmain.css">
+    <!-- js -->
     <script src="../js/main.js" defer></script>
     <script src="../js/app.js" defer></script>
-    <title>Confluence</title>
 </head>
 
 <body>
