@@ -66,7 +66,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <div class="description">
         <h5>Contexte</h5>
         <h6>Pour accompagner le travail de Graphéine sur Cap Atlantique, j'ai voulu ajouter une pincée de sel avec une animation en 3D 😉</h6>
-        <p>Vous trouverez l'animation principale et les recherches pour cette animation. L'animation représente le sel de Guérande se déplaçant pour former le logo (j'aurais aimé faire mieux mais mon stage touchait malheureusement à sa fin).</p>
+        <p>Vous trouverez l' animation principale et les recherches pour cette animation. L' animation représente le sel de Guérande se déplaçant pour former le logo (j'aurais aimé faire mieux mais mon stage touchait malheureusement à sa fin).</p>
     </div>
     <div class="below-fold">
         <div class="gallery_mid">
