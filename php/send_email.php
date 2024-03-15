@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     // Adresse e-mail de réception
-    $recipient = 'hello.picodesign@gmail.com';
+    $recipient = 'hello.picodesign@gmail.com, alessandro@picodesign.fr';
 
     // Sujet de l'e-mail
     $subject = '✨Nouveau message site✨';
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<script>alert("WAA Super! Votre message a été envoyé avec succès.");</script>';
 
         // Envoyer une réponse automatique
-        $autoResponse = "Bonojur $name,\n\n";
+        $autoResponse = "Bonjour $name,\n\n";
         $autoResponse .= "J'ai bien reçu votre message et je vous répondrai dans les plus brefs délais.\n\n";
         $autoResponse .= "Cordialement,\nAlessandro";
         mail($email, "Réponse automatique - Votre message a été reçu", $autoResponse);
