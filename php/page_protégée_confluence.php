@@ -16,6 +16,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confluence</title>
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../logo.ico">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
     <meta name="description" content="Déclinaisons de la charte graphique sur différents supports.">
     <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
     <meta name="keywords" content="Confluence, Graphéine, Stage 2023, Chartre graphique, Déclinaisons, Supports de communication, Papier à entête, Newsletter, Carte de correspondance, Carte de visite, Plaquette  de présentation, Signature mail, Bannière réseaux sociaux, Posts réseaux sociaux, Vignette vidéo, Habillage vidéo, Badge, Kakémono, Powerpoint, Fond d'écran, Communication visuelle, Design graphique,  Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">

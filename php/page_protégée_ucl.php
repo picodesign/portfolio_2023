@@ -16,6 +16,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Université Catholique de Lille</title>
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../logo.ico">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
     <meta name="description" content="Animation sur After Effects des différents emblèmes redessiné par Graphéine pour l'université catholique de Lille.">
     <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
     <meta name="keywords" content="Université Catholique de Lille, Graphéine, Stage 2023, Refonte emblème, Animation, After Effects, Emblème, Changements, Redessiné, Graphisme, Design, Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">

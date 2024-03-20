@@ -16,6 +16,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuv Beauty</title>
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../logo.ico">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
     <meta name="description" content="Pour compléter la charte graphique conçue par Graphéine, j'ai été chargé d'approfondir quelques idées pour les animations de la marque.">
     <meta name="author" content="Pico Design - Alessandro Ansquer Capiluppi">
     <meta name="keywords" content="Yuv Beauty, Graphéine, Stage 2023, Animation, Motion 3D, Motion texte, Pictos, Coloration professionnelle, Innovant, Cheveux, Nuances, Cartouches d'aluminium, Économie circulaire, Design, Portfolio, Alessandro, Alessandro Ansquer, Ansquer, Alessandro Capiluppi, DNMADE, Book, Designer graphique, Conception visuelle">

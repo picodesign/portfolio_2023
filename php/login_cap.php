@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <link rel="Shortcut icon" type="x-icon" href="../logo.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../logo.ico">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <!-- CSS -->
